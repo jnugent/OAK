@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/oak/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2000-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OAK plugin localization strings for the en_US (U.S. English) locale.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.oak.OAK">OAK</message>
+	<message key="plugins.generic.oak.displayName">OAK Plugin</message>
+	<message key="plugins.generic.oak.description">Coordinate author fees through OAK (Open Access Key).</message>
+	<message key="plugins.generic.oak.oakId">Oak ID: {$oakId}</message>
+	<message key="plugins.generic.oak.contactName">Contact Name: {$authorFullName}</message>
+	<message key="plugins.generic.oak.contactEmail">Contact Email: {$authorEmail}</message>
+	<message key="plugins.generic.oak.submittedToOak">Submitted To OAK: {$submittedToOak}</message>
+	<message key="plugins.generic.oak.articleMustBePublished">Note: article must be scheduled for publication for OAK submission.</message>
+	<message key="plugins.generic.oak.submitArticleToOak">Submit article to OAK</message>
+	<message key="plugins.generic.oak.publicationFee">Publication Fee:</message>
+	<message key="plugins.generic.oak.currencyUSD">USD</message>
+	<message key="plugins.generic.oak.currencyEUR">EUR</message>
+	<message key="plugins.generic.oak.currencyGBP">GBP</message>
+	<message key="plugins.generic.oak.discount">Discount Percentage:</message>
+	<message key="plugins.generic.oak.manageSettings">Settings</message>
+	<message key="plugins.generic.oak.manager.oakSettings">OAK Plugin Settings</message>
+	<message key="plugins.generic.oak.manager.settings.description">Configure your OAK installation with your publisher ID and password.</message>
+	<message key="plugins.generic.oak.manager.settings.publisherId">Publisher ID</message>
+	<message key="plugins.generic.oak.manager.settings.password">Password</message>
+	<message key="plugins.generic.oak.manager.settings.publisherIdRequired">A publisher ID is required.</message>
+	<message key="plugins.generic.oak.manager.settings.passwordRequired">A password is required.</message>
+</locale>
