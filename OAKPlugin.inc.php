@@ -306,6 +306,7 @@ class OAKPlugin extends GenericPlugin {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$article =& $publishedArticleDao->getPublishedArticleByArticleId($submissionId);
 		$isPublished = false;
+		$issue = null;
 		if ($article) {
 			// Get the issue
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -332,8 +333,8 @@ class OAKPlugin extends GenericPlugin {
 				'Password'             => $this->getPassword(),
 				'ArticleTitle'         => $article->getLocalizedTitle(),
 				'JournalId'            => $this->getJournalId(),
-				'JournalVolume'        => isset($issue) ? $issue->getVolume() : 'na',
-				'JournalIssue'         => isset($issue) ? $issue->getNumber() : 'na',
+				'JournalVolume'        => $issue->getVolume(),
+				'JournalIssue'         => $issue->getNumber(),
 				'CorrespondingAuthor'  => $authorOAKId,
 				'Currency'             => $currencyCode,
 				'Price'                => $price,
@@ -348,7 +349,7 @@ class OAKPlugin extends GenericPlugin {
 
 		$response = $this->_makeRequest('SubmitArticleExtended2', $params);
 
-		$sReturnValue = $response->SubmitArticleResult;
+		$sReturnValue = $response->SubmitArticleExtended2Result;
 
 		if ($sReturnValue == 'OK') {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
