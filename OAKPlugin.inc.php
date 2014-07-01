@@ -21,7 +21,7 @@ class OAKPlugin extends GenericPlugin {
 	 * URL for oak server
 	 * @var string
 	 */
-	var $_host = 'http://www.openaccesskey.com/publisherservice/oakpublisherservice.asmx?WSDL';
+	var $_host = 'https://www.openaccesskey.com/publisherservice/oakpublisherservice.asmx?WSDL';
 
 	/**
 	 * Publisher account for oak server
