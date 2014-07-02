@@ -326,7 +326,7 @@ class OAKPlugin extends GenericPlugin {
 		$this->setJournalId($this->_getJournalId($journalName));
 
 		$params = array(
-			'SubmitArticleExtended2' => array(
+			'SubmitArticleExtendedDiscount' => array(
 				'DOI'                  => $article->getPubId('doi'),
 				'PublisherId'          => $this->getPublisherId(),
 				'PublisherReferenceNo' => $article->getId(),
@@ -347,9 +347,9 @@ class OAKPlugin extends GenericPlugin {
 			)
 		);
 
-		$response = $this->_makeRequest('SubmitArticleExtended2', $params);
+		$response = $this->_makeRequest('SubmitArticleExtendedDiscount', $params);
 
-		$sReturnValue = $response->SubmitArticleExtended2Result;
+		$sReturnValue = $response->SubmitArticleExtendedDiscountResult;
 
 		if ($sReturnValue == 'OK') {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
